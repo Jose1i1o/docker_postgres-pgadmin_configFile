@@ -5,9 +5,9 @@ services:
     container_name: postgres_database
     image: postgres:15.1
     volumes:
+      # This way we can get a related path
       - ./postgres/data:/var/lib/postgresql/data
       # - postgres-db:/var/lib/postgresql/data
-      # This way we can get a related path
     environment:
       - POSTGRES_PASSWORD=123456
 
